@@ -1,0 +1,200 @@
+*{margin:0;padding:0;}
+*{text-decoration:none;}
+
+.container{
+	width:100%;
+	height:100%;
+	background-color:none;
+	margin:0 auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+.header{
+	width:100%;
+	height:10%;
+	position: fixed;
+	background-color:#990033;
+	box-shadow:0px -10px 10px -10px black inset;
+}
+.userheader{
+	width:20%;
+	height:100%;
+	margin:0 auto;
+	float:right;
+	border-radius:5%;
+	background-color:#5e0231;
+	box-shadow:-3px -3px 20px 0px black inset;
+}
+.user{
+	height:100%;
+}
+.user img{
+	height:100%;
+	width:40%;
+	border-radius:50%;
+	float:left;
+}
+.user a{
+	height:10%;
+	width:10%;
+	font-size:70%;
+	position:relative;
+	float:left;
+	color:#dbc3d0;
+}
+.user:hover .dropbtndiv{
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.user:active img{
+	transform: scale(1.1);
+}
+.footer{
+	width:100%;
+	height:10%;
+	float:left;
+	background-color: #90A4AE;
+}
+.dropdown{
+	display:inline-block;
+	margin:0 auto;
+}
+.dropbtndiv{
+	display:inline-block;
+	margin:0 auto;
+	text-align:center;
+}
+.dropbtndiv a{
+	cursor:default;
+}
+.drop_content{
+	cursor:default;
+	display:none;
+	margin:0 auto;
+	border:1px;
+	position:absolute;
+	box-shadow:-3px -3px 20px 0px white inset;
+}
+.drop_content ul li{
+	padding: 12px 16px;
+	display:block;
+}
+.drop_content ul li a{
+	text-decoration:none;
+	color:#641E16 ;
+}
+.drop_content a:hover{
+	color:#F2D7D5 ;
+	cursor:pointer;
+}
+.drop_content a:active{
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+}
+.body{
+	width:100%;
+	height:100%;
+	display:inline-block;
+}
+.menu{
+	height:100%;
+	width:100%;
+	float:left;
+	padding:0 10px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	position:static;
+	background-color:white;
+}
+.midwifedetails{
+	float:left;
+	width:680px;
+	height:430px;
+	background:#FDE6FC;
+	margin-top:15px;
+	margin-left:5px;
+	margin-bottom:15px;
+}
+.midwifedetails h2{
+	padding:15px;
+	width:500px;
+}
+.midwifedetails ul {
+	/*float:left;
+	width:500px;*/
+	padding-left:20px;
+	padding-top:50px;
+	margin-left:25px;
+	margin-top:20px;
+}
+.midwifedetails ul li{
+	margin-bottom:20px;
+}
+.midwifedetails img{
+	float:right;
+	padding-top:30x;
+	margin-right:60px;
+}
+.midwifedetails h2{
+	float:left;
+}
+.news-feed{
+	float:right;
+	width:30%;
+	height:40%;
+	border-radius:12px;
+	margin:15px 5px 20px 20px;
+	margin-left:28px;
+	background:#FBE2F3;
+}
+.news-feed ul{
+	list-style:none;
+}
+.news-feed ul li{
+	list-decoration:none;
+	height:20%;
+	border-bottom:1px solid black;
+	
+}
+.news-feed ul li:last-child {
+	border-bottom:none;
+}
+.news-feed h3{
+	background:#856046;
+	padding:4px;
+	
+}
+.home-col{
+	width:100%;
+	height:10%;
+	margin-top:1%;
+	float:left;
+	display:inline-block;
+}
+.home-col h2{
+	height:40%;
+	margin-bottom:20px;
+	padding:6px;
+	background:#c7a693;
+	color:#5e0231;
+}
+.services{
+	width:21%;
+	background:#FAD8F3;
+	float:left;
+	margin-right:1%;
+	margin-left:1%;
+	padding:1%;
+	border-radius:10px;
+	margin-bottom:10px;
+	posision:relative;
+}
+.services img{
+	float:left;
+	margin-right:1%;
+}
+.services button{
+	background:transparent;
+	border:none;
+}
+.services button:active {
+  transform: translateY(4px);
+}

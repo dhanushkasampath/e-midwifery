@@ -1,0 +1,147 @@
+<html>
+<title>Clinic</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/clinic.css">
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown").hover(function(){
+			$(".drop_content").slideDown("slow");
+		},function(){
+			$(".drop_content").slideUp("slow");
+		});
+	});
+	function addVaccine() {
+		/*var vaccineCode = document.getElementById("vaccinecode").value;
+		var Vaccine = document.getElementById("vaccine").value;
+		var Amount = document.getElementById("amount").value;
+		var Date = document.getElementById("data").value;
+		*/
+		var table = document.getElementById("vaccineTable");
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		
+		cell1.innerHTML="fsdfsd";
+		
+		//cell1.innerHTML=vaccineCode;
+		cell2.innerHTML=Vaccine;
+		cell3.innerHTML=Amount;
+		cell4.innerHTML=Date;
+	}
+</script>
+<body>
+<div>
+	<div class="container">
+		<div style="width:75%; height:10%; position:relative;">
+			<div class="header">
+				<div style="float:left;">
+					<h1 style="color:#CC33CC;">Easy Midwify</h1>
+				</div>
+				
+				<div class="dropdown userheader">
+					<div class="dropbtndiv user">
+						<img src="images/midwife.png" alt="midwife">
+						<a><h2>Anna Willson</h2></a>
+					</div>
+					<div class="drop_content" style="width:100%; color:gray; background-color:#EF9A9A ;">
+						<ul>
+							<li><a>View Me</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="backbody">
+			<div class="right_sidebar">
+				<div class="online_userbar">
+					<select>
+						<option>Area 1</option>
+						<option>Area 2</option>
+						<option>Area 3</option>
+						<option>Area 4</option>
+					</select>
+					<div class="mother">
+						<img src="images/users/user1.jpg" alt="user_photo">
+						<ul><a><h1>Katherine Margarette</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user2.jpg" alt="user_photo">
+						<ul><a><h1>Kate Amelia</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user3.jpg" alt="user_photo">
+						<ul><a><h1>Sarah Williams</h1></a></ul>
+					</div>			
+				</div>
+				<div class ="newsfeed clearfix">
+					
+					<h2>Latest News</h2>
+						
+					<ul>
+						<li><a href="#">news 1 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 2 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 3 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="body">
+				<form>
+					<div class="form_content" style="border-Style:solid;">
+						<div style="width:100%; margin-left:20%;">
+							<label>Schedule Date</label>
+							<select style="width:40%;">
+								<option>Date 1</option>
+								<option>Date 2</option>
+								<option>Date 3</option>
+								<option>Date 4</option>
+							</select>
+						</div>
+					</div>
+					<div class="form_content" style="display:inline-block; width:90%;">
+						<div style="float:left; width:45%;">
+							<label>Venue</label>
+							<input style="width:70%;" type="text" id="venue" placeholder="Venue" name="txtvenue">
+						</div>
+						<div style="float:left; width:45%;">
+							<label>Time</label>
+							<input style="width:70%;" type="text" id="time" placeholder="Time" name="txttime">
+						</div>
+						<div class="btn"><button style="float:right;">Add</button></div>
+					</div>
+					<div class="form_content">
+						<table id="chlidTable" Style="width:100%;">
+							<tr>
+								<th>Child</th>
+								<th>Age</th>
+								<th>Vaccine</th>
+								<th>Amount</th>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div style="float:left; width:100%; height:100%;">
+				<div style="float:left; margin:20px;">
+					Copyrights &copy; Domain Name. All rights Reseved
+				</div>
+					
+				<div style="float:right; margin:20px;">
+					website by: FordSlash
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

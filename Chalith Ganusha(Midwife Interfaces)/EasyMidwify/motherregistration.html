@@ -1,0 +1,195 @@
+<html>
+<title>Register Mother</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/motherregistration.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown").hover(function(){
+			$(".drop_content").slideDown("slow");
+		},function(){
+			$(".drop_content").slideUp("slow");
+		});
+	});
+</script>
+</head>
+<body>
+<div>
+	<div class="container">
+		<div style="width:75%; height:10%; position:relative;">
+			<div class="header">
+				<div style="float:left;">
+					<h1 style="color:#CC33CC;">Easy Midwify</h1>
+				</div>
+				
+				<div class="dropdown userheader">
+					<div class="dropbtndiv user">
+						<img src="images/midwife.png" alt="midwife">
+						<a><h2>Anna Willson</h2></a>
+					</div>
+					<div class="drop_content" style="width:100%; color:gray; background-color:#EF9A9A ;">
+						<ul>
+							<li><a>View Me</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="backbody">
+			<div class="right_sidebar">
+				<div class="online_userbar">
+					<select>
+						<option>Area 1</option>
+						<option>Area 2</option>
+						<option>Area 3</option>
+						<option>Area 4</option>
+					</select>
+					<div class="mother">
+						<img src="images/users/user1.jpg" alt="user_photo">
+						<ul><a><h1>Katherine Margarette</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user2.jpg" alt="user_photo">
+						<ul><a><h1>Kate Amelia</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user3.jpg" alt="user_photo">
+						<ul><a><h1>Sarah Williams</h1></a></ul>
+					</div>			
+				</div>
+				<div class ="newsfeed clearfix">
+					
+					<h2>Latest News</h2>
+						
+					<ul>
+						<li><a href="#">news 1 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 2 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 3 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="body">
+				<form action="midwifePHP/registerMother.php" method="post">
+					<div class="form_content">
+						<label>Full Name</label>
+						<input style="width:40%;" type="text" id="fullname" placeholder="Fullname" name="txtfullname">
+					</div>
+					<div class="form_content">
+						<label>Date of Birth</label>
+						<input style="width:20%;" type="text" id="dateofbirth" placeholder="DateOfBirth" name="txtdateofbirth">
+					</div>
+					<div class="form_content" style="display:inline-block; width:100%;">
+						<div style="float:left; width:40%;">
+							<label>Area</label>
+							<input style="width:40%;" type="text" id="area" placeholder="Area" name="txtarea">
+						</div>
+						<div style="float:left; width:40%;">
+							<label>Area Code</label>
+							<input style="width:40%;" type="text" id="areacode" placeholder="AreaCode" name="txtareacode">
+						</div>
+					</div>
+					<div class="form_content">
+						<label>Occupation</label>
+						<input style="width:40%;" type="text" id="occupation" placeholder="Occupation" name="txtoccupation">
+					</div>
+					<div class="form_content" style="display:inline-block; width:40%;">
+						<div style="float:left;">
+							<label>Address</label>
+						</div>
+						<div style="float:right; width:80%;">
+							<input style="width:100%; type="text" id="addressline1" placeholder="Line1" name="txtaddressline1"></br>
+							<input style="width:100%; type="text" id="addressline2" placeholder="Line2" name="txtaddressline2"></br>
+							<input style="width:100%; type="text" id="addressline3" placeholder="Line3" name="txtaddressline3"></br>
+							<input style="width:100%; type="text" id="addressline4" placeholder="Line4" name="txtaddressline4">
+						</div>
+					</div></br>
+					<div class="form_content" style="display:inline-block; width:40%;">
+						<div style="float:left;">
+							<label>Telephone Number</label>
+						</div>
+						<div style="float:right; width:70%;">
+							<input style="width:100%;" type="text" id="tpnumber1" placeholder="Telephone1" name="txttpnumber1"></br>
+							<input style="width:100%;" type="text" id="tpnumber2" placeholder="Telephone2" name="txttpnumber2"></br>
+							<input style="width:100%;" type="text" id="tpnumber3" placeholder="Telephone3" name="txttpnumber3">
+						</div>
+					</div>
+					<div class="form_content">
+						<label>Email</label>
+						<input style="width:37.5%;" type="text" id="email" placeholder="Email" name="txtemail">
+					</div>
+					<div class="form_content" style="display:inline-block; width:40%;">
+						<div style="float:left;">
+							<label>Education Level</label>
+						</div>
+						<div style="float:right; width:70%;">
+							<input type="radio" id="high" name="edulevel" value="high">High</br>
+							<input type="radio" id="Medium" name="edulevel" value="medium">Medium</br>
+							<input type="radio" id="Low" name="edulevel" value="low">Low
+						</div>	
+					</div>
+					<div class="form_content" style="border-Style:dotted;">
+						<h3>Mother</h3>
+						<h4 style="color:red;">This details required for mothers only</h4>
+						<div class="form_content">
+							<label>Pregnancy Period</label>
+							<input type="text" id="pregnancyperiodweeks" placeholder="Weeks" name="txtpregnancyperiodweeks">
+							<input type="text" id="pregnancyperioddays" placeholder="Days" name="txtpregnancyperioddays">
+						</div>
+						<div class="form_content">
+							<label>Number of Children</label>
+							<input type="text" id="nofchildren" placeholder="NumberOfChildren" name="txtnofchildren">
+						</div>
+						<div class="form_content" style="border-style:solid;">
+							<h4 style="color:red;">If any epidemics</h4>
+							<label>Epidemic Code</label>
+							<input style="width:30%;" type="text" id="epidemiccode" placeholder="EpidemicCode" name="txtepidemiccode"></br>
+							<label>Epdemic Name</label>
+							<input style="width:30%;" type="text" id="epidemicname" placeholder="EpidemicName" name="txtepidemicname">
+						</div>
+						<div class="form_content" style="border-style:solid;">
+							<h4 style="color:red;">If any abortions</h4>
+							<label>Date of abortion</label>
+							<input type="text" id="dateofabortion" placeholder="DateOfAbortion" name="txtdateofabortion"></br>
+							<label>Reason</label></br>
+							<textarea rows="4" cols="50" id="resonforabortion" placeholder="Reason" name="txtresonforabortion"></textarea>
+						</div>
+						<div class="form_content" style="border-style:solid;">
+							<h4 style="color:red;">If any child deaths</h4>
+							<label>Child's Full Name</label>
+							<input style="width:30%;" type="text" id="deathchildname" placeholder="NameOfTheChild" name="txtdeathchildname"></br>
+							<label>Date of death</label>
+							<input type="text" id="dateofdeath" placeholder="DateOfDeath" name="txtdateofdeath"></br>
+							<label>Reason</label></br>
+							<textarea rows="4" cols="50" id="resonfordeath" placeholder="Reason" name="txtresonfordeath"></textarea>
+						</div>
+					</div>
+					<div class="form_content">
+						<label>Notes</label></br>
+						<textarea rows="4" cols="80" id="notesformother" placeholder="Notes" name="txtnotesformother"></textarea>
+					</div>
+					<div class="form_content" style="float:right;">
+						<button type="submit">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div style="float:left; width:100%; height:100%;">
+				<div style="float:left; margin:20px;">
+					Copyrights &copy; Domain Name. All rights Reseved
+				</div>
+					
+				<div style="float:right; margin:20px;">
+					website by: FordSlash
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

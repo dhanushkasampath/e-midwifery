@@ -1,0 +1,193 @@
+<html>
+<title>Update Child</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/updatechild.css">
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".dropdown").hover(function(){
+			$(".drop_content").slideDown("slow");
+		},function(){
+			$(".drop_content").slideUp("slow");
+		});
+	});
+	function addVaccine() {
+		/*var vaccineCode = document.getElementById("vaccinecode").value;
+		var Vaccine = document.getElementById("vaccine").value;
+		var Amount = document.getElementById("amount").value;
+		var Date = document.getElementById("data").value;
+		*/
+		var table = document.getElementById("vaccineTable");
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		
+		cell1.innerHTML="fsdfsd";
+		
+		//cell1.innerHTML=vaccineCode;
+		cell2.innerHTML=Vaccine;
+		cell3.innerHTML=Amount;
+		cell4.innerHTML=Date;
+	}
+</script>
+<body>
+<div>
+	<div class="container">
+		<div style="width:75%; height:10%; position:relative;">
+			<div class="header">
+				<div style="float:left;">
+					<h1 style="color:#CC33CC;">Easy Midwify</h1>
+				</div>
+				
+				<div class="dropdown userheader">
+					<div class="dropbtndiv user">
+						<img src="images/midwife.png" alt="midwife">
+						<a><h2>Anna Willson</h2></a>
+					</div>
+					<div class="drop_content" style="width:100%; color:gray; background-color:#EF9A9A ;">
+						<ul>
+							<li><a>View Me</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="backbody">
+			<div class="right_sidebar">
+				<div class="online_userbar">
+					<select>
+						<option>Area 1</option>
+						<option>Area 2</option>
+						<option>Area 3</option>
+						<option>Area 4</option>
+					</select>
+					<div class="mother">
+						<img src="images/users/user1.jpg" alt="user_photo">
+						<ul><a><h1>Katherine Margarette</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user2.jpg" alt="user_photo">
+						<ul><a><h1>Kate Amelia</h1></a></ul>
+					</div>
+					<div class="mother">
+						<img src="images/users/user3.jpg" alt="user_photo">
+						<ul><a><h1>Sarah Williams</h1></a></ul>
+					</div>			
+				</div>
+				<div class ="newsfeed clearfix">
+					
+					<h2>Latest News</h2>
+						
+					<ul>
+						<li><a href="#">news 1 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 2 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+						<li><a href="#">news 3 &raquo </a><p>Which currently progress manually. This project is based on the requirements</p></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="body">
+				<form>
+					<div class="form_content" style="border-Style:solid;">
+						<div style="float:left; width:40%;">
+							<div style="width:100%; margin-left:20%;">
+								<label>Area</label>
+								<select style="width:40%;">
+									<option>||areacode|| Area 1</option>
+									<option>||areacode|| Area 2</option>
+									<option>||areacode|| Area 3</option>
+									<option>||areacode|| Area 4</option>
+								</select>
+							</div>
+						</div>
+						<div style="float:left; width:40%; margin-left:10%">
+							<label>Child Name</label>
+							<input style="width:70%;" type="text" id="chlidname" placeholder="||ChildID|| ChildName" name="txtchildname">
+						</div></br>
+					</div>
+					<div class="form_content" style="display:inline-block; border-Style:dotted; border-color:blue;">
+						<div style="float:left; width:40%;">
+							<h2>Child's Name</h2>
+						</div>
+						<div style="float:left; width:20%; margin-left:35%;">
+							<img src="images/users/child1.jpg" alt="child_photo">
+						</div>
+					</div>
+					<div class="form_content">
+						<label>Weight</label>
+						<input style="width:20%;" type="text" id="childweight" placeholder="Weight" name="txtchildweght">
+					</div></br>
+					<div class="form_content" style="border-Style:dotted;">
+						<h3>Vaccine</h3>
+						<div class="form_content" style="display:inline-block; width:100%;">
+							<div style="float:left; width:22%;">
+								<label>Vaccine Code</label>
+								<input style="width:40%;" type="text" id="vaccinecode" placeholder="VaccineCode" name="txtvaccinecode">
+							</div>
+							<div style="float:left; width:22%;">
+								<label>Vaccine</label>
+								<input style="width:40%;" type="text" id="vaccine" placeholder="Vaccine" name="txtvaccine">
+							</div>
+							<div style="float:left; width:22%;">
+								<label>Amount</label>
+								<input style="width:40%;" type="text" id="amount" placeholder="Amount" name="txtamount">
+							</div>
+							<div style="float:left; width:22%;">
+								<label>Date</label>
+								<input style="width:40%;" type="text" id="date" placeholder="Date" name="txtdate">
+							</div>
+							<div class="btn" onclick="addVaccine()"><button>Add</button></div>
+						</div>
+						<label>Vaccines</label>
+						<table id="vaccineTable" Style="width:100%;">
+							<tr>
+								<th>Vaccine Code</th>
+								<th>Vaccine</th>
+								<th>Amount</th>
+								<th>Date</th>
+							</tr>
+						</table>
+					</div></br>
+					<div class="form_content" style="border-style:dotted;">
+						<h4>If any epidemics</h4>
+						<label>Epidemic Code</label>
+						<input style="width:30%;" type="text" id="epidemiccode" placeholder="EpidemicCode" name="txtepidemiccode"></br>
+						<label>Epdemic Name</label>
+						<input style="width:30%;" type="text" id="epidemicname" placeholder="EpidemicName" name="txtepidemicname">
+					</div></br>
+					<div class="form_content" style="border-style:dotted;">
+						<h4>If mother death</h4>
+						<label>Child's Full Name</label>
+						<label>Date of death</label>
+						<input type="text" id="dateofdeath" placeholder="DateOfDeath" name="txtdateofdeath"></br>
+						<label>Reason</label></br>
+						<textarea rows="4" cols="50" id="resonfordeath" placeholder="Reason" name="txtresonfordeath"></textarea>
+					</div>
+					<div class="form_content" style="float:right;">
+						<button type="submit">Update</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div style="float:left; width:100%; height:100%;">
+				<div style="float:left; margin:20px;">
+					Copyrights &copy; Domain Name. All rights Reseved
+				</div>
+					
+				<div style="float:right; margin:20px;">
+					website by: FordSlash
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
